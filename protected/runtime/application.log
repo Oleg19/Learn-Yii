@@ -4345,3 +4345,14 @@ REQUEST_URI=/yii/www/index.php
 in C:\OpenServer\domains\localhost\yii\www\protected\views\site\index.php (23)
 in C:\OpenServer\domains\localhost\yii\www\protected\controllers\SiteController.php (42)
 in C:\OpenServer\domains\localhost\yii\www\index.php (13)
+2014/12/16 18:49:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index-site".' in C:\OpenServer\domains\localhost\yii\YiiRoot\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\localhost\yii\YiiRoot\framework\web\CController.php(270): CController->missingAction('index-site')
+#1 C:\OpenServer\domains\localhost\yii\YiiRoot\framework\web\CWebApplication.php(282): CController->run('index-site')
+#2 C:\OpenServer\domains\localhost\yii\YiiRoot\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index-site')
+#3 C:\OpenServer\domains\localhost\yii\YiiRoot\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\localhost\yii\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/www/index.php?r=site/index-site
+HTTP_REFERER=http://localhost/yii/www/index.php
+---

@@ -43,8 +43,9 @@ class Author extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
             'book' => [self::HAS_MANY, 'book', 'id_name'],
-            'image' => [self::HAS_ONE, 'image', 'id_image'],
+            'image' => [self::HAS_MANY, 'image', 'id_image'],
 		);
+		//$image = 'image';
 	}
 
 	/**

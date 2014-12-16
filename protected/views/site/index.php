@@ -4,7 +4,7 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<h1>Добро пожаловать <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
 <p>Congratulations! You have successfully created your Yii application.</p>
 
@@ -20,10 +20,12 @@ $this->pageTitle=Yii::app()->name;
             <td><?php echo ($author->title) ?></td>
             <td>
                 <?php foreach($author->book as $bk): ?>
-                    <?php foreach($author->image as $img): ?>
-                        <?php echo($img->image) ?>
-                    <?php endforeach ?>
                     <?php echo ($bk->name) ?>
+                <?php endforeach ?>
+            </td>
+	        <td>
+                <?php foreach($author->image as $img): ?>
+	                <img src="<?php echo($img->image) ?>" class="index_image" />
                 <?php endforeach ?>
 
             </td>
